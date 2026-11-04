@@ -11,8 +11,9 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
 /* Paper identity remains readable across screen sizes. */
-.paper-identity .paper-title{font-size:14px}.paper-identity .authors{font-size:14px}.paper-identity .affiliation{font-size:13px}
-@media(max-width:560px){.paper-identity .paper-title,.paper-identity .authors{font-size:13px}.paper-identity .affiliation{font-size:12px}}
+.paper-identity .authors{font-size:16px;color:var(--ink);margin-top:0}.paper-identity .affiliation{font-size:15px;color:#575b52}.paper-identity .publication{font-weight:600;color:var(--ink)}
+.hero-summary .paper-title{font-size:16px;font-weight:550;line-height:1.55;margin-bottom:14px}
+@media(max-width:560px){.paper-identity .authors{font-size:15px}.paper-identity .affiliation{font-size:14px}.hero-summary .paper-title{font-size:15px}}
 
 /* Lead with the paper identity, then introduce the method. */
 .hero-copy .paper-identity{border-top:0;padding-top:0;margin-top:0}
