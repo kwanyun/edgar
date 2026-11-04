@@ -1,0 +1,9 @@
+node_modules/
+research/
+.openai/
+*.tar.gz
+*.tar
+*.zip
+.DS_Store
+Thumbs.db
+__pycache__/
