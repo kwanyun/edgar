@@ -133,7 +133,7 @@ window.EDGAR_DATA = {
       "views": [
         {
           "id": "cap4d-turntable-cross",
-          "label": "Cross-reenactment",
+          "label": "Sample 1",
           "before": "assets/video/cap4d-turntable-cross-before.mp4",
           "after": "assets/video/cap4d-turntable-cross-after.mp4",
           "posterBefore": "assets/posters/cap4d-turntable-cross-before.jpg",
@@ -148,7 +148,7 @@ window.EDGAR_DATA = {
         },
         {
           "id": "cap4d-turntable-single",
-          "label": "Single-image reconstruction",
+          "label": "Sample 2",
           "before": "assets/video/cap4d-turntable-single-before.mp4",
           "after": "assets/video/cap4d-turntable-single-after.mp4",
           "posterBefore": "assets/posters/cap4d-turntable-single-before.jpg",
