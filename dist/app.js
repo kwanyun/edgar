@@ -138,11 +138,9 @@ if (!data || !data.groups?.length) {
 } else {
   const hero = new Comparison($('#hero-player'), {autoplay: true});
   const main = new Comparison($('#main-player'));
-  const cross = new Comparison($('#cross-player'));
   hero.load(data.groups.find(g => g.id === data.hero.group).views.find(v => v.id === data.hero.view));
   let activeGroup = data.groups[0];
   let activeView = activeGroup.views[0];
-  let crossView = data.cross[0];
   const tabs = $('#pipeline-tabs');
   data.groups.forEach(group => {
     const button = document.createElement('button');
@@ -192,22 +190,7 @@ if (!data || !data.groups?.length) {
     button.innerHTML = on ? 'Full frame <span aria-hidden="true">↙</span>' : 'Zoom detail <span aria-hidden="true">↗</span>';
     main.root.classList.toggle('zoomed', on);
   });
-  data.cross.forEach(view => {
-    const option = document.createElement('option');
-    option.value = view.id;
-    option.textContent = view.label;
-    $('#cross-select').append(option);
-  });
-  function selectCross(view) {
-    crossView = view;
-    cross.load(view);
-    $('#target-reference').src = view.targetReference;
-    $('#cross-note').textContent = view.note;
-  }
-  $('#cross-select').addEventListener('change', event => selectCross(data.cross.find(v => v.id === event.target.value)));
-  selectCross(crossView);
   $('#show-reference').addEventListener('click', () => openMedia('Recorded reference', activeView.reference, 'video', 'Same camera and motion as the comparison.'));
-  $('#show-driver').addEventListener('click', () => openMedia('Motion source', crossView.driver, 'video', 'A different person supplies the motion for the target avatar.'));
 }
 
 const metrics = {
