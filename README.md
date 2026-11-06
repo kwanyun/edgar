@@ -37,4 +37,6 @@ The project page is published at https://kwanyun.github.io/edgar/.
 
 GitHub Actions validates and publishes `dist/` whenever website changes are pushed to `main`. The workflow can also be started manually from the Actions tab.
 
-Paper and Code links intentionally have empty destinations until release URLs are ready. Set their `href` values and remove `data-placeholder`, `aria-disabled`, and the placeholder `title` when enabling them.
+Paper: https://arxiv.org/abs/2611.07909
+
+Code: https://github.com/kwanyun/edgar-code/

@@ -262,4 +262,3 @@ $('#copy-citation').addEventListener('click', async () => {
 document.addEventListener('visibilitychange', () => { if (document.hidden) players.forEach(player => player.pause()); });
 
 // Keep unreleased resource links empty without reloading the current page.
-$$('a[data-placeholder]').forEach(link => link.addEventListener('click', event => event.preventDefault()));
