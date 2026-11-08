@@ -139,10 +139,11 @@ if (!data || !data.groups?.length) {
   const hero = new Comparison($('#hero-player'), {autoplay: true});
   const main = new Comparison($('#main-player'));
   hero.load(data.groups.find(g => g.id === data.hero.group).views.find(v => v.id === data.hero.view));
-  let activeGroup = data.groups[0];
+  const comparisonGroups = [...data.groups].sort((a, b) => Number(b.id === 'cap4d') - Number(a.id === 'cap4d'));
+  let activeGroup = comparisonGroups[0];
   let activeView = activeGroup.views[0];
   const tabs = $('#pipeline-tabs');
-  data.groups.forEach(group => {
+  comparisonGroups.forEach(group => {
     const button = document.createElement('button');
     button.type = 'button';
     button.textContent = group.label;
