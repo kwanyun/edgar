@@ -19,3 +19,8 @@
 .hero-copy .paper-identity{border-top:0;padding-top:0;margin-top:0}
 .hero-summary{border-top:1px solid var(--line);padding-top:24px;margin-top:28px}
 .hero-summary .hero-actions{margin-top:22px}
+
+/* A small mascot beside the project title. */
+#hero-heading{display:flex;align-items:center;gap:16px}
+.title-mascot{display:block;width:64px;height:64px;flex:0 0 64px;object-fit:contain;transform:translateY(4px)}
+@media(max-width:560px){#hero-heading{gap:12px}.title-mascot{width:48px;height:48px;flex-basis:48px;transform:translateY(2px)}}

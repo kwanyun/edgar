@@ -19,7 +19,7 @@ for(const view of views){
   if(view.before===view.after)failures.push(`${view.id}: identical source path`);
   if(!view.frames||!view.fps)failures.push(`${view.id}: missing timing`);
 }
-for(const file of ['index.html','styles.css','app.js','favicon.svg','assets/method.png','assets/architecture.png'])if(!fs.existsSync(path.join(root,file)))failures.push(`Missing ${file}`);
+for(const file of ['index.html','styles.css','app.js','favicon.ico','favicon-32.png','favicon-64.png','assets/method.png','assets/architecture.png'])if(!fs.existsSync(path.join(root,file)))failures.push(`Missing ${file}`);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 for(const id of ids)if(ids.filter(x=>x===id).length>1)failures.push(`Duplicate id ${id}`);
